@@ -51,7 +51,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
     lmath.ToMatrix([]int{1, 2, 3}).Print()
     // 2d slice of int to matrix and print values.
     lmath.ToMatrix([][]int{[]int{1, 2},[]int{3, 4}}).Print()
-    // Slice of float64 ti matrix and print values.
+    // Slice of float64 to matrix and print values.
      lmath.ToMatrix([]float64{4, 5, 6}).Print()
     // 2d slice of float64 to matrix and print values.
     lmath.ToMatrix([][]float64{[]float64{7, 8},[]float64{9, 0}}).Print()
