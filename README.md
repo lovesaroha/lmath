@@ -1,5 +1,6 @@
 # lmath
 This is a generalized math package with clean and transparent API for the Go language.
+Also available for javascript [github/lovesaroha/lmath.js](https://github.com/lovesaroha/lmath.js) 
 
 ## Features
 - Lightweight and Fast.
@@ -17,6 +18,31 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
 
 ## Usage
 
+### Random
+
+```Golang
+  // Random float64 between given range.
+  random := lmath.Random(-1, 1)
+```
+
+### Map Given Value Between Given Range
+```Golang
+  // Return float64 between given range of (200, 1000).
+  result := lmath.Map(20 , 0, 100, 200, 1000)
+```
+
+## Apply Math Functions
+```Golang
+  // Sigmoid.
+  result := lmath.Sigmoid(1.5)
+  // Diff of sigmoid.
+  dresult := lmath.Dsigmoid(result)
+  // Relu.
+  result := lmath.Relu(2)
+  // Diff of relu.
+  dresult := lmath.Drelu(result)
+```
+
 ### Create Matrix 
 
 ```Golang
@@ -29,7 +55,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
   matrix.Print()
 
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/38.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/38.png)
 
 ### Create Random Matrix 
 
@@ -42,7 +68,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
   // Print matrix values.
   matrix.Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/39.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/39.png)
 
 ### Convert Slice Into Matrix 
 
@@ -56,7 +82,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
     // 2d slice of float64 to matrix and print values.
     lmath.ToMatrix([][]float64{[]float64{7, 8},[]float64{9, 0}}).Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/45.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/45.png)
 
 ### Matrix Element Wise Operations (Add, Subtract, Multiply, Divide) 
 
@@ -74,7 +100,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
   // Divide and print values.
   matrix.Sub(matrixB).Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/40.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/40.png)
 
 ### Matrix Element Wise Operations With Scalar Value (Add, Subtract, Multiply, Divide) 
 
@@ -91,7 +117,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
   // Divide and print values.
   matrix.Sub(2).Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/47.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/47.png)
 
 ### Matrix Dot Product 
 
@@ -103,7 +129,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
   // Dot product and print values.
   matrix.Dot(matrixB).Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/41.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/41.png)
 
 ### Matrix Transpose
 ```Golang
@@ -115,7 +141,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
   // Transpose and print values.
   matrix.Transpose().Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/42.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/42.png)
 
 ### Add All Column Values
 ```Golang
@@ -127,7 +153,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
   // Add columns and print values.
   matrix.AddCols().Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/46.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/46.png)
 
 ### Change Matrix Values (Map)
 ```Golang
@@ -141,7 +167,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
     return value * value
   }).Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/43.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/43.png)
 
 ### Apply Function In Matrix
 ```Golang
@@ -153,7 +179,7 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
   // Apply sigmoid and print values.
   matrix.Map(lmath.Sigmoid).Print()
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/44.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/44.png)
 
 ## Examples
 
@@ -183,4 +209,4 @@ Make sure [Git is installed](https://git-scm.com/downloads) on your machine and 
     weights.Transpose().Dot(inputs).Add(bias).Map(lmath.Sigmoid).Print()
 
 ```
-![graph](https://raw.githubusercontent.com/lovesaroha/gimages/main/48.png)
+![image](https://raw.githubusercontent.com/lovesaroha/gimages/main/48.png)
